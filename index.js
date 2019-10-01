@@ -1,8 +1,13 @@
-import Header from "./components/Header";
-import Nav from "./components/Nav";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+import { Header, Nav, Main, Footer } from './components'
+const state={
+  home:{
+    heading: "Home Page"
+  },
+  about:{
+    heading: "About Page"
+  }
 
+};
 console.log(typeof Header);
 console.log(typeof Nav);
 
@@ -12,8 +17,8 @@ console.log(typeof Nav);
  * We want to assign the markup that is contained in the components as the innerHTML of root.
  */
 document.querySelector("#root").innerHTML = `
-  ${Header()}
+  ${Header(state.home.heading)}
   ${Nav()}
   ${Main()}
   ${Footer()}
-`;
+  `;
